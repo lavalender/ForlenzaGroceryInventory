@@ -19,6 +19,8 @@ def remove_item(inventory, item_name):
     inventory (dict): The current inventory
     item_name (str): The name of the item to remove
     """
+    #converts input to uppercase and sets it to the variable item_name
+    item_name.upper() == item_name
     del inventory[item_name]
     print(f"{item_name} removed from the inventory.")
 
@@ -31,7 +33,7 @@ def update_quantity(inventory, item_name, new_quantity):
     item_name (str): The name of the item to update
     new_quantity (str): The new quantity of the item
     """
-    inventory[item_name] == new_quantity
+    inventory[item_name] = new_quantity
     print(f"{item_name} quantity updated to {new_quantity}.")
 
 def display_inventory(inventory):
@@ -56,8 +58,11 @@ inventory = {
 }
 
 while True:
-    print("\n1. Add item\n2. Remove item\n3. Update quantity\n4. Display inventory\n5. Exit")
-    choice = input("Enter your choice (1-5): ")
+    print("\n1. Add item\n2. Remove item\n3. Update quantity\n4. Exit")
+    print("")
+    display_inventory(inventory) #displays inventory throughout code use
+    print("")
+    choice = input("Enter your choice (1-4): ")
 
     if choice == "1":
         name = input("Enter item name: ")
@@ -70,9 +75,7 @@ while True:
         name = input("Enter item name to update: ")
         quantity = input("Enter new quantity: ")
         update_quantity(inventory, name, quantity)
-    elif choice == "4":
-        display_inventory(inventory)
-    elif choice == "5":
+    elif choice == "4": #removed option to view inventory
         print("Exiting the program.")
         break
     else:

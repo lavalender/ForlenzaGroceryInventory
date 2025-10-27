@@ -14,4 +14,11 @@
   - View the current inventory.
   - Search for items by name.
 
+## Version 1.2
+- 2025-10-27
+-Added and updated features to make it more convient for employees
+- Updates and Features:
+  - allowed users to see inventory throughout use
+  -accurate inventory updates when a quantity of an item is changed
+  -resolved error when removing items
 
